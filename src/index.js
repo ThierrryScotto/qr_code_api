@@ -1,12 +1,12 @@
-'use strict';
+'use strict'
 
 // dependecies
-const router = require('./router/index');
+const router = require('./routes/index');
 
 // routes
-const qrcode = require('./router/qrcode'); 
+const qrcode = require('./routes/_qrcode');
 
 // constant
-const basePath = "v1";
+const basePath = '/v1';
 
-router.express.use(basePath, qrcode);
+router.express.use(basePath,  qrcode);

@@ -8,4 +8,4 @@ const qrcodeRetriveController = require('../controllers/qrcode/retrive.controlle
 
 express.router.post('/generate/qrcode', qrcodeRetriveController.createQrCode);
 
-module.exports = express.router;
+module.exports = express.router;  

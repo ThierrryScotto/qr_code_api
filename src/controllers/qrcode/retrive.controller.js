@@ -4,9 +4,11 @@
 const qr = require('qr-image');
 
 const createQrCode = (req, res) => {
-    let product = req.body;
+    const product = req.body;
 
-    var code = qr.image(product, { type: 'png' });
+    const jsonProduct = JSON.stringify(product);
+
+    var code = qr.image(jsonProduct, { type: 'png' });
     res.setHeader('Content-type', 'image/png');  
     code.pipe(res);
 };
